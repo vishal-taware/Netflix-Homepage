@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.main{
+    height: 70vh;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/a09bb938-2d90-42ae-986e-5a3e4abf9e77/8eb1e781-3494-4aa4-9405-268ca6473e4c/IN-en-20231113-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+}
+
+.main .box{
+    position: absolute;
+    top: 0;
+    height: 70vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+
+nav{
+    display: flex;
+    max-width: 80vw;
+    padding: 25px 0px;
+    margin: auto;
+    justify-content: space-between;
+    height: 62px;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.logo{
+    width: 150px;
+    color: red;
+    position: relative;
+    z-index: 10;
+}
+
+.english{
+    border: 1px solid rgba(255, 255, 255, 0.462);
+    color: white;
+    background: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 800;
+    position: relative;
+    z-index: 10; /* you need add position to element then add "z-index" */
+}
+
+.sign{
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 20px;
+    color: white;
+    font-weight: 800;
+    position: relative;
+    z-index: 10; /* you need add position to element then add "z-index" */
+}
+
+.hero{
+    height: calc(100% - 112px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    font-family: 'Martel sans', sans-serif;
+    gap: 20px;
+    padding: 0px 30px;
+}
+
+.hero> :nth-child(1){
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.hero> :nth-child(2){
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero> :nth-child(3){
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.separation{
+    height: 7px;
+    background-color: rgb(61, 61, 61);
+}
+
+.btn{
+    padding: 6px 18px;
+    font-weight: bolder;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-red{
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    padding: 3px 24px;
+}
+
+.btn-red-sn{
+    background-color: red;
+    color: white;
+    padding: 9px 18px;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-direction: row;
+}
+
+input{
+    height: 60px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.337);
+    border: 1px solid rgba(255, 255, 255, 0.61);
+    color: white;
+    padding: 0px 20px;
+    font-size: 1rem;
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.518);
+    left: 0px;
+    position: relative;
+}
+
+.started{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+::placeholder{
+    color: white;
+    position: relative;
+    left: 20px;
+}
+
+@media (max-width: 768px) {
+  .input {
+    flex-direction: column;
+  }
+
+  .main{
+    height: calc(70vh + 100px);
+  }
+
+  .main> .box{
+    height: calc(70vh + 100px);
+  }
+
+  .hero> :nth-child(1){
+    font-size: 28px;
+  }
+
+  .hero> :nth-child(2){
+    font-size: 14px;
+  }
+
+  .hero> :nth-child(3){
+    font-size: 12px;
+  }
+
+  .table{
+    font-size: 9px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  
+  .input-last{
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 359px) {
+    .main {
+        height: 100vh;
+    }
+
+    .main> .box{
+        height: 100vh;
+    }
+
+    .input-last{
+        transform: scale(0.4);
+    }
+}
+
+.section-img-1> img{
+    width: 400px;
+    grid-area: main;
+    position: relative;
+    z-index: 1;
+}
+
+.section-img-1> video{
+    width: 309px;
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+}
+
+.section-img-1{
+    display: grid;
+    grid-template-areas: "main";
+}
+
+.section-text :nth-child(1){
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.section-text :nth-child(2){
+    font-size: 19px;
+}
+
+.section-text{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.section-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 60vw;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.gfx-3{
+    display: grid;
+    grid-template-areas: "main3";
+}
+
+.gfx-3> video{
+    grid-area: main3;
+    width: 240px;
+    justify-self: center;
+    position: relative;
+    top: 30px;
+}
+
+.gfx-3> img{
+    grid-area: main3;
+    width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.faq{
+    margin-top: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px; 
+}
+
+.faq-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.que:hover{
+    background-color: #ff0000;
+}
+
+.que{
+    background-color: rgb(46, 45, 45);
+    padding: 28px;
+    margin: 8px 160px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+.faq> h2{
+    color: white;
+    margin-left: 160px;
+    position: relative;
+    top: 30px;
+}
+
+.last{
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.head-last{
+    color: white;
+    text-align: center;
+}
+
+.input-last{
+    display: flex;
+    justify-content: center;
+}
+
+.input-last> input{
+    width: 500px;
+}
+
+.final-block{
+    margin-left: 160px;
+    position: relative;
+    top: 20px;
+}
+
+.number{
+    color: rgba(255, 243, 243, 0.801);
+    position: relative;
+    text-decoration: underline;
+}
+
+.table{
+    display: flex;
+    margin-top: 40px;
+    color: #ffffffb3;
+    flex-direction: row;
+    column-gap: 165px;
+    font-size: 14px;
+    font-weight: lighter;
+    text-decoration: underline;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+li{
+        list-style-type:none;
+}
+
+.english-last{
+    position: relative;
+    margin-top: 60px;
+}
+
+.label{
+    color: #ffffffb3;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer{
+    color: #ffffffb3;
+    display: flex;
+    font-size: 13px;
+    padding-bottom: 200px;
+}
